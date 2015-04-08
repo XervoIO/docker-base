@@ -10,15 +10,17 @@ All user code is run under mop user/group by the Modulus platform.
 
 `/mnt`
 
-The base image requires a volume to be mounted at `/mnt` with a `mop` subdirectory.
-This directory is the mop user's HOME directory. The `mop` subdirectory must
-have sufficient permissions for the mop user to read/write.
+The volume mounted at `/mnt` requires the follow subdirectories to be created
+by the host system and accessible by the `mop` user/group.
+
+`/mnt/tmp` Temporary storage. The TEMP_DIR environment variable is defined to here.
+`/mnt/home` The mop user's home directory. The HOME environment variable is defined to here.
 
 ## Usage
 The Modulus base image is used like any other image:
 
 ```
-FROM: onmodulus/image-base:1.0
+FROM: onmodulus/image-base:1.0.0
 
 # Customizations
 
