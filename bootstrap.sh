@@ -3,7 +3,7 @@ set -e
 set -x
 
 apt-get update
-apt-get install -y wget
+apt-get install -y wget git zip unzip
 
 # Create the mop user. All user code execution runs in this user.
 groupadd -r mop -g 444
@@ -17,4 +17,4 @@ curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v0.5.
 bash /opt/modulus/nave.sh usemain 0.10.38
 rm /opt/modulus/nave.sh
 
-npm install -g npm@2.7.5
+npm install -g npm@2.8.3
