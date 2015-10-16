@@ -20,7 +20,7 @@ by the host system and accessible by the `mop` user/group.
 The Modulus base image is used like any other image:
 
 ```
-FROM: onmodulus/image-base:1.0.0
+FROM: onmodulus/docker-base
 
 # Customizations
 
