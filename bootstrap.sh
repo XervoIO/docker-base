@@ -3,7 +3,7 @@ set -e
 set -x
 
 apt-get update
-apt-get --purge remove -y openssh-server
+apt-get --purge remove -y openssh-server openssh-client openssh-sftp-server
 apt-get upgrade -y
 apt-get install -y wget git zip unzip python
 
