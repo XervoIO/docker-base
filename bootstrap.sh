@@ -3,7 +3,7 @@ set -e
 set -x
 
 apt-get update
-apt-get --purge remove -y openssh-server openssh-client openssh-sftp-server
+apt-get --purge remove -y openssh-server openssh-sftp-server
 apt-get upgrade -y
 apt-get install -y wget git zip unzip python
 
@@ -20,3 +20,5 @@ bash /opt/modulus/nave.sh usemain 0.10.38
 rm /opt/modulus/nave.sh
 
 npm install -g npm@2.8.3
+apt-get --purge remove -y openssh-client
+apt-get autoremove -y
