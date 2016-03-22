@@ -2,6 +2,7 @@ FROM phusion/baseimage:0.9.16
 MAINTAINER Modulus <help@modulus.io>
 
 Add . /opt/modulus
+ENV PATH=/opt/modulus/bin:$PATH
 
 RUN /opt/modulus/bootstrap.sh
 
