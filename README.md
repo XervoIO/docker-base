@@ -1,10 +1,9 @@
-Modulus Base Docker Image
-=========
+# Xervo Base Docker Image
 
-The base Docker image for all Modulus deploy and runtime images.
+> The base Docker image for all Xervo deploy and runtime images.
 
 ## mop user
-All user code is run under mop user/group by the Modulus platform.
+All user code is run under `mop` user/group by the Xervo platform.
 
 ## Volumes
 
@@ -13,14 +12,16 @@ All user code is run under mop user/group by the Modulus platform.
 The volume mounted at `/mnt` requires the follow subdirectories to be created
 by the host system and accessible by the `mop` user/group.
 
-`/mnt/tmp` Temporary storage. The TEMP_DIR environment variable is defined to here.
-`/mnt/home` The mop user's home directory. The HOME environment variable is defined to here.
+| Directory   | Environment Variables         | Usage
+| ----------- | ----------------------------- | ----- 
+| `/mnt/tmp`  | `TEMP_DIR` `TMPDIR` `TMP_DIR` | Temporary storage
+| `/mnt/home` | `HOME`                        | The `mop` user's home directory
 
 ## Usage
-The Modulus base image is used like any other image:
+The Xervo base image is used like any other image:
 
 ```
-FROM: onmodulus/docker-base
+FROM: xervo/baseimage
 
 # Customizations
 
