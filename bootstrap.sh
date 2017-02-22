@@ -18,6 +18,6 @@ curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v2.2.
 bash /opt/modulus/nave.sh usemain 6.9.5
 rm /opt/modulus/nave.sh
 
-npm install -g npm@2.8.3
+npm install -g npm@4.2.0
 apt-get --purge remove -y openssh-client openssh-server openssh-sftp-server
 apt-get autoremove -y
