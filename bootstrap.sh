@@ -15,7 +15,7 @@ sed -i 's@PATH="\(.*\)"@PATH="/opt/modulus/bin:\1"@' /etc/environment
 
 # Install node.
 curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v2.2.3/nave.sh
-bash /opt/modulus/nave.sh usemain 0.10.38
+bash /opt/modulus/nave.sh usemain 6.9.5
 rm /opt/modulus/nave.sh
 
 npm install -g npm@2.8.3
