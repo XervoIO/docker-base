@@ -14,7 +14,7 @@ useradd -u 441 -r -g mop -d /mnt/home -s /bin/bash -c "Modulus Image User" mop
 sed -i 's@PATH="\(.*\)"@PATH="/opt/modulus/bin:\1"@' /etc/environment
 
 # Install node.
-curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v0.5.1/nave.sh
+curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v2.2.3/nave.sh
 bash /opt/modulus/nave.sh usemain 0.10.38
 rm /opt/modulus/nave.sh
 
