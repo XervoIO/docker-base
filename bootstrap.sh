@@ -14,10 +14,10 @@ useradd -u 441 -r -g mop -d /mnt/home -s /bin/bash -c "Modulus Image User" mop
 sed -i 's@PATH="\(.*\)"@PATH="/opt/modulus/bin:\1"@' /etc/environment
 
 # Install node.
-curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v0.5.1/nave.sh
-bash /opt/modulus/nave.sh usemain 0.10.38
+curl -o /opt/modulus/nave.sh https://raw.githubusercontent.com/isaacs/nave/v2.2.3/nave.sh
+bash /opt/modulus/nave.sh usemain 6.9.5
 rm /opt/modulus/nave.sh
 
-npm install -g npm@2.8.3
+npm install -g npm@4.2.0
 apt-get --purge remove -y openssh-client openssh-server openssh-sftp-server
 apt-get autoremove -y
